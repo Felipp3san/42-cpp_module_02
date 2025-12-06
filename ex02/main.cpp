@@ -15,33 +15,16 @@
 
 int	main(void)
 {
-	Fixed const a(10.5f);
-	Fixed const	b(2);
-	Fixed const	c(15);
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	std::cout << "a from raw is " << a.getRawBits() << std::endl;
-	std::cout << "b from raw is " << b.getRawBits() << std::endl;
-	std::cout << "a * b = " << (a * b) << std::endl;
-	std::cout << "a / b = " << (a / b) << std::endl;
-	//std::cout << "a is " << a << std::endl;
-	//std::cout << "b is " << b << std::endl;
-	//std::cout << "c is " << c << std::endl;
-	//std::cout << "a > b " << (a > b) << std::endl;
-	//std::cout << "a < b " << (a < b) << std::endl;
-	//std::cout << "a >= b " << (a >= b) << std::endl;
-	//std::cout << "a <= b " << (a <= b) << std::endl;
-	//std::cout << "a == b " << (a == b) << std::endl;
-
-	//std::cout << "c > b " << (c > b) << std::endl;
-	//std::cout << "c < b " << (c < b) << std::endl;
-	//std::cout << "c >= b " << (c >= b) << std::endl;
-	//std::cout << "c <= b " << (c <= b) << std::endl;
-	//std::cout << "c == b " << (c == b) << std::endl;
-
-	//std::cout << "a + b = " << (a + b) << std::endl;
-	//std::cout << "a - b = " << (a - b) << std::endl;
-	//std::cout << "a * b = " << (a * 2) << std::endl;
-	//std::cout << "a / b = " << (a / b) << std::endl;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
 
 	return (0);
 }
